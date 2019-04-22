@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main>
+      <header id='header'>
+        <h1 id='title'>A Survey Form</h1>
+        <p id="description">Let us know how we can improve freeCodeCamp!</p>
+      </header>
+      <section id='section'>
+        <form id="survey-form"  method="GET" action="https://crossorigin.me/https://freecodecamp.com">
+          <div id="for-name">
+            <label class="labels" id='name-label' for="name">* Name</label>
+            <input type="text" id="name" class="input-field" autofocus required placeholder="Enter your name here...">
+          </div>
+          <div id="for-email">
+            <label class="labels" id='email-label' for="email">* Email</label>
+            <input type="email" id="email" class="input-field"  autofocus required placeholder="Enter your email here...">
+          </div>
+          <div id="for-number">
+            <label class="labels" id='number-label' for="number">* Age</label>
+            <input type="number" id="number" class="input-field"  autofocus required placeholder="Enter your age here..." min="1" max="125">
+          </div>
+          <div id='for-dropdown'>
+            <label class="labels" id='dropdown-label' for="dropdown">Which option describes your current role?</label>
+            <select id="dropdown" name="currentPos" class="dropdown">
+              <option disabled value>Select an option</option>
+              <option  value="student">Student</option>
+              <option value="job">Full Time Job</option>
+              <option value="learner">Full Time Learner</option>
+              <option value="preferNo">Prefer not to say</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div id='for-radio'>
+            <label class="labels" id='radio-label' for="radio">How likely will you recommend freeCodeCamp to a friend?</label>
+            <ul style="list-style: none;" class="rightTab">
+              <li class="radio"><label>Definitely<input name="radio-buttons" value="1"  type="radio" class="userRatings" ></label></li>
+              <li class="radio"><label>Maybe<input name="radio-buttons" value="2"  type="radio" class="userRatings" ></label></li>
+              <li class="radio"><label>Not sure<input name="radio-buttons" value="3"  type="radio" class="userRatings" ></label></li>
+            </ul>
+          </div>
+          <div id="for-preferences">
+            <label class="labels" id='checkbox-label' for="preferences">Things that should be improved in the future<br>(Check all that apply):</label>
+            <ul id="preferences" style="list-style: none;" class="rightTab">
+              <li class="checkbox"><label><input name="prefer" value="1" type="checkbox" class="userRatings">Front-end Projects</label></li>
+              <li class="checkbox"><input name="prefer" value="2" type="checkbox" class="userRatings">Back-end Projects</li>
+              <li class="checkbox"><label><input name="prefer" value="3" type="checkbox" class="userRatings">Data Visualization</label></li>
+              <li class="checkbox"><label><input name="prefer" value="4" type="checkbox" class="userRatings">Challenges</label></li>
+              <li class="checkbox"><label><input name="prefer" value="5" type="checkbox" class="userRatings">Open Source Community</label></li>
+              <li class="checkbox"><label><input name="prefer" value="6" type="checkbox" class="userRatings">Gitter help rooms</label></li>
+              <li class="checkbox"><label><input name="prefer" value="7" type="checkbox" class="userRatings">Videos</label></li>
+              <li class="checkbox"><label><input name="prefer" value="8" type="checkbox" class="userRatings">City Meetups</label></li>
+              <li class="checkbox"><label><input name="prefer" value="9" type="checkbox" class="userRatings">Wiki</label></li>
+              <li class="checkbox"><label><input name="prefer" value="10" type="checkbox" class="userRatings">Forum</label></li>
+              <li class="checkbox"><label><input name="prefer" value="10" type="checkbox" class="userRatings">Additional Courses</label></li>
+            </ul>
+          </div>
+          <div id="for-comments">
+            <label class='labels' for="comments">Any Comments or Suggestions?</label>
+            <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="Enter your comment here..."></textarea>
+          </div>
+          <button id="submit" type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
